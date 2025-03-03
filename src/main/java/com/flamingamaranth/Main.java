@@ -26,8 +26,7 @@ public class Main {
                 case 3 -> GameClass.VOLEUR;
                 default -> GameClass.GUERRIER;
             };
-            player = new Player(name, selectedClass.getPV(), selectedClass.getPM(), selectedClass.getForce(), selectedClass.getIntelligence(), selectedClass.getDefense(), selectedClass.getResistanceMagique(), selectedClass.getAgilite(), selectedClass.getChance(), selectedClass.getEndurance(), selectedClass.getEsprit());
-            System.out.println(player.getPV());
+            player = new Player(name, selectedClass.getStats());
             sc.close();
             playing = false;
         }
