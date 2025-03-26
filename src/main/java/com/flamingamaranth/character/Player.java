@@ -1,32 +1,12 @@
 package com.flamingamaranth.character;
 
-public class Player {
-    private Name name;
-    private Stats stats;
+public class Player extends BaseCharacter {
     private Inventory inventory;
-    private int XCoordinate;
-    private int YCoordinate;
 
-    public Player(Name name, Stats stats, Inventory inventory) {
-        this.name = name;
-        this.stats = stats;
+    public Player(Name name, Stats stats, Inventory inventory, int XCoordinate, int YCoordinate) {
+        super(name, stats, XCoordinate, YCoordinate);
         this.inventory = inventory;
     }
 
-    public Name getName() {
-        return this.name;
-    }
-
-    public Stats getStats() {
-        return this.stats;
-    }
-
-    public Inventory gInventory() {
-        return this.inventory;
-    }
-
-    @Override
-    public String toString() {
-        return this.name.getName() + " " + this.stats.toString() + " " + this.inventory.toString();
-    }
+    public Inventory gInventory() { return this.inventory; }
 }
